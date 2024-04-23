@@ -1,0 +1,26 @@
+#define LED_1 12 
+#define LED_2 14
+#define LED_3 2
+int delay = 100 ; 
+ void setup ()
+ {
+    pinMode (LED_1,OUTPUT);
+    pinMode (LED_2,OUTPUT);
+    pinMode (LED_3,OUTPUT);
+
+ }
+ void loop ()
+ {
+LED_Chaser(1,0,0);
+delay(delay);
+LED_Chaser(0,1,0);
+delay(delay);
+LED_Chaser(0,0,1);
+
+ }
+ void LED_Chaser (int i,int j,int k)
+ {
+    digitalWrite(LED_1,i);
+    digitalWrite(LED_2,j);
+    digitalWrite(LED_3,k);
+ }
